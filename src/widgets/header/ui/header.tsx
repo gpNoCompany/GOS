@@ -7,7 +7,7 @@ export const Header = () => {
         <h1 className="text-3xl text-white">GOS</h1>
       </div>
       <div className="flex justify-start flex-1 pl-10">
-        <Input />
+        <Input placeholder="Search..." />
       </div>
       <ul className="flex items-center gap-5">
         <li>

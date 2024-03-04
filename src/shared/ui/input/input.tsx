@@ -1,4 +1,8 @@
-export const Input = () => {
+import { InputHTMLAttributes } from 'react'
+
+type Props = InputHTMLAttributes<HTMLInputElement>
+
+export const Input = ({ placeholder, ...rest }: Props) => {
   return (
     <div className="flex items-center py-2.5 bg-body border-[1px] border-transparent rounded-xl overflow-hidden focus-within:border-[1px] focus-within:border-white">
       <div className="px-2.5">
@@ -6,8 +10,9 @@ export const Input = () => {
       </div>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder={placeholder}
         className="pr-2.5 text-input text-thirdly outline-0 border-0 bg-transparent group placeholder:text-thirdly focus:outline-none"
+        {...rest}
       />
     </div>
   )
