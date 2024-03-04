@@ -1,3 +1,5 @@
+import { Header } from '@widgets/header'
+
 export const App = () => {
-  return <h1 className="font-bold">hello world</h1>
+  return <Header />
 }
