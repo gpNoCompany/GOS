@@ -11,7 +11,7 @@ export const Input = ({ placeholder, ...rest }: Props) => {
       <input
         type="text"
         placeholder={placeholder}
-        className="pr-2.5 text-input text-thirdly outline-0 border-0 bg-transparent group placeholder:text-thirdly focus:outline-none"
+        className="pr-2.5 text-main text-thirdly outline-0 border-0 bg-transparent group placeholder:text-thirdly focus:outline-none"
         {...rest}
       />
     </div>

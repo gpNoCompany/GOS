@@ -2,7 +2,7 @@ import { Input } from '@shared/ui/input'
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between p-5 bg-header shadow-header">
+    <header className="flex items-center justify-between p-5 bg-header shadow-main">
       <div className="min-w-sidebar">
         <h1 className="text-3xl text-white">GOS</h1>
       </div>
