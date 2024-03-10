@@ -6,7 +6,7 @@ import { FormFields } from '../../../pages/sign-in/ui/sign-in'
 type InputProps = {
   placeholder: string
   name: 'email' | 'password'
-  type: string
+  type?: string
   register: UseFormRegister<FormFields>
 }
 export const Input = ({ placeholder, type, name, register }: InputProps) => {

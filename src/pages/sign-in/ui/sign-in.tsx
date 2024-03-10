@@ -1,14 +1,25 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import { Input } from '../../../shared/input'
 import { SocialsAccReg } from '../../../widgets/socials-reg'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-export type FormFields = {
-  email: string
-  password: string
-}
+import { z } from 'zod'
+
+const schema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+})
+
+export type FormFields = z.infer<typeof schema>
 
 export const SignInForm = () => {
-  const { register, handleSubmit } = useForm<FormFields>()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormFields>({
+    resolver: zodResolver(schema),
+  })
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
     console.log(data)
@@ -21,12 +32,14 @@ export const SignInForm = () => {
             Log in to [name]
           </legend>
           <Input register={register} name="email" placeholder="Email" />
+          {errors.email && <div>{errors.email.message}</div>}
           <Input
             register={register}
             name="password"
             type="password"
             placeholder="Password"
           />
+          {errors.password && <div>{errors.password.message}</div>}
           <a href="#" className="text-light-gray text-right">
             Forgot your password?
           </a>
