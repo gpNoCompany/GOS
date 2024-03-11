@@ -1,18 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Input } from '../../../shared/input'
-import { SocialsAccReg } from '../../../widgets/socials-reg'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
+import { Input } from '../../shared/input'
+import { FormFields } from '../../shared/types'
+import { SocialsAccReg } from '../../widgets/socials-reg'
+import { onSubmit, schema } from './lib'
 
-import { z } from 'zod'
-
-const schema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
-})
-
-export type FormFields = z.infer<typeof schema>
-
-export const SignInForm = () => {
+export const SignUpForm = () => {
   const {
     register,
     handleSubmit,
@@ -21,9 +14,6 @@ export const SignInForm = () => {
     resolver: zodResolver(schema),
   })
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data)
-  }
   return (
     <div className="flex justify-around flex-col  h-screen items-center  bg-light-black">
       <form onSubmit={handleSubmit(onSubmit)} className="w-80">
@@ -31,6 +21,8 @@ export const SignInForm = () => {
           <legend className="text-center text-2xl font-black mb-5">
             Log in to [name]
           </legend>
+          <Input register={register} name="login" placeholder="Login" />
+          {errors.login && <div>{errors.login.message}</div>}
           <Input register={register} name="email" placeholder="Email" />
           {errors.email && <div>{errors.email.message}</div>}
           <Input
@@ -52,10 +44,9 @@ export const SignInForm = () => {
         </div>
         <SocialsAccReg />
       </form>
-      <a href="#" className="text-light-gray flex gap-1 justify-center ">
-        Don't have an account?
-        <p className="text-white font-bold ">Sign up</p>
-      </a>
+      <p className="text-light-gray">
+        By signing up, you agree to our Terms, Data Policy and Cookies Policy.
+      </p>
     </div>
   )
 }

@@ -1,11 +1,9 @@
-import { InputHTMLAttributes } from 'react'
 import { UseFormRegister } from 'react-hook-form'
-import { FormFields } from '../../../pages/sign-in/ui/sign-in'
+import { FormFields } from '../../types'
 
-// type Props = InputHTMLAttributes<HTMLInputElement>
 type InputProps = {
   placeholder: string
-  name: 'email' | 'password'
+  name: 'email' | 'password' | 'login'
   type?: string
   register: UseFormRegister<FormFields>
 }
