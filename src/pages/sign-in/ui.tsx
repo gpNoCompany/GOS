@@ -22,18 +22,22 @@ export const SignInForm = () => {
             Log in to [name]
           </legend>
           <Input register={register} name="login" placeholder="Login" />
-          {errors.login && <div>{errors.login.message}</div>}
+          {errors.login && (
+            <div className="text-red">{errors.login.message}</div>
+          )}
           <Input
             register={register}
             name="password"
             type="password"
             placeholder="Password"
           />
-          {errors.password && <div>{errors.password.message}</div>}
+          {errors.password && (
+            <div className="text-red">{errors.password.message}</div>
+          )}
           <a href="#" className="text-light-gray text-right">
             Forgot your password?
           </a>
-          <button className="transition-all hover:opacity-80 bg-btn-bg-green text-black h-11 rounded-lg text-xs font-semibold">
+          <button className="transition-all hover:opacity-80 bg-green text-black h-11 rounded-lg text-xs font-semibold">
             Log in
           </button>
         </fieldset>
