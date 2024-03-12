@@ -11,7 +11,7 @@ export const Sidebar = () => {
         <li className="px-5">
           <Button label="add" />
         </li>
-        <li className="flex flex-col gap-2.5 p-5 bg-gray rounded-xl shadow-main">
+        <li className="flex flex-col gap-2.5 p-5 bg-gray-400 rounded-xl shadow-main">
           <h3 className="text-main text-first">Used space</h3>
           <ProgressInput progress={progress} />
           <p className="text-main text-white">666 Gb from 1 Тb </p>
@@ -33,7 +33,7 @@ export const Sidebar = () => {
           </div>
         </li>
         <li className="mt-auto">
-          Download <span className="text-secondary">Standalone Version</span>
+          Download <span className="text-green">Standalone Version</span>
         </li>
       </ul>
     </aside>

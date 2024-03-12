@@ -12,7 +12,7 @@ export const Layout = ({ children }: Props) => {
       <Header />
       <div className="flex">
         <Sidebar />
-        <main className="h-full w-full flex flex-col py-8 pr-10 pl-14 overflow-y-scroll break-words">
+        <main className="h-full w-full flex flex-col py-8 pr-10 pl-14">
           {children}
         </main>
       </div>
