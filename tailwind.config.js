@@ -9,22 +9,33 @@ export default {
       minWidth: {
         sidebar: '18.75rem'
       },
+      maxWidth: {
+        sidebar: '18.75rem'
+      },
       fontSize: {
-        input: ['0.9375rem', {
+        main: ['0.9375rem', {
           lineHeight: '1.25rem'
         }],
       },
       colors: {
-        first: '#C3C5CB',
-        secondary: '#60CA86',
-        thirdly: '#919399'
-      },
-      backgroundColor: {
-        header: '#2A2A2B',
-        body: '#202021'
+        blue: '#005FF9',
+        green: '#60CA86',
+        red: '#DC5050',
+        purple: '#AE6AD7',
+        gray: {
+          100: '#1B1B1C',
+          200: '#202021',
+          300: '#2A2A2B',
+          400: '#303030',
+          500: '#484A4D',
+          600: '#919399',
+          700: '#C3C5CB',
+        }
       },
       boxShadow: {
-        header: '0px 7px 25px 0px rgba(0, 0, 0, 0.1)'
+        main: '0px 7px 25px 0px rgba(0, 0, 0, 0.1)',
+        secondary: '0px 14px 35px 0px rgba(0, 0, 0, 0.8)',
+        long: '',
       }
     },
   },
