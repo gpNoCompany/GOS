@@ -1,8 +1,8 @@
 import { ListItem } from '../../../shared/pop-up-item/ui/list-item'
 import { PopUpWrapper } from '../../../shared/pop-up-wrapper/ui/pop-up-wrap'
-import { items } from '../model/list-items'
+import { items } from '../model/items'
 
-export const PopUpAction = () => {
+export const PopUpInfo = () => {
   return (
     <PopUpWrapper>
       {items.map((item) => {
