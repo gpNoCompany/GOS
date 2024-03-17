@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { SubmitHandler } from 'react-hook-form'
 import { z } from 'zod'
-import { FormFields } from '../../shared/types'
+import { FormFields } from '../../shared/types/types'
 
 export const schema = z.object({
   login: z.string().min(4),

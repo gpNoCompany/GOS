@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Input } from '../../shared/input'
-import { FormFields } from '../../shared/types'
+import { FormFields } from '../../shared/types/types'
 import { SocialsAccReg } from '../../widgets/socials-reg'
 import { onSubmit, schema } from './lib'
 

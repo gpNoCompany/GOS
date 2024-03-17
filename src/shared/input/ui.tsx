@@ -1,5 +1,5 @@
 import { UseFormRegister } from 'react-hook-form'
-import { FormFields } from '../types'
+import { FormFields } from '../types/types'
 
 type InputProps = {
   placeholder: string
