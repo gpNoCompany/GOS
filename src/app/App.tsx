@@ -4,11 +4,5 @@ import { Menu } from '@widgets/menu'
 import { Layout } from '../layout/index'
 
 export const App = () => {
-  return (
-    <Layout>
-      <Menu />
-      <Breadcrumbs />
-      <CardList />
-    </Layout>
-  )
+  return <></>
 }

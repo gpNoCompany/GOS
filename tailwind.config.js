@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       minWidth: {
@@ -30,6 +27,14 @@ export default {
           500: '#484A4D',
           600: '#919399',
           700: '#C3C5CB',
+        },
+        'light-black': '#1D1D1D',
+        'light-gray': '#5F5F5F',
+        'dark-gray': '#2B2B2B',
+        'btn-bg-black': '#222222',
+        'btn-border-black': '#343434',
+        'input-border-gray': 'rgba(177, 150, 255, 0.5)',
+        'input-hover': '#383838',
         }
       },
       boxShadow: {
@@ -39,5 +44,6 @@ export default {
       }
     },
   },
+
   plugins: [],
 }
