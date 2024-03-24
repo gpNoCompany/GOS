@@ -4,9 +4,7 @@ import { z } from 'zod'
 import { FormFields } from '../../shared/types/types'
 
 export const schema = z.object({
-  login: z.string().min(4),
   email: z.string().email(),
-  password: z.string().min(8),
 })
 
 export const onSubmit: SubmitHandler<FormFields> = async (data) => {

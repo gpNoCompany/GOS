@@ -12,6 +12,6 @@ export const schema = z.object({
 
 export const onSubmit: SubmitHandler<FormFields> = async (data) => {
   await axios
-    .post('http://176.57.218.48/api/auth', data)
+    .post('http://176.57.218.48/api/auth:4444', data)
     .then((res) => console.log(res))
 }
