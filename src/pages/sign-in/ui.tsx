@@ -1,10 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 import { Input } from '../../shared/input'
 import { FormFields } from '../../shared/types/types'
 import { SocialsAccReg } from '../../widgets/socials-reg'
 import { onSubmit, schema } from './lib'
-import { Link } from 'react-router-dom'
 
 export const SignInForm = () => {
   const {
@@ -47,10 +47,13 @@ export const SignInForm = () => {
         </div>
         <SocialsAccReg />
       </form>
-      <a href="#" className="flex justify-center gap-1 text-light-gray ">
+      <Link
+        to="/sign-up"
+        className="flex justify-center gap-1 text-light-gray "
+      >
         Don't have an account?
         <p className="font-bold text-white ">Sign up</p>
-      </a>
+      </Link>
     </div>
   )
 }
