@@ -8,6 +8,7 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: 'sign-in',
@@ -16,9 +17,5 @@ export const router = createBrowserRouter([
   {
     path: 'sign-up',
     element: <SignUpForm />,
-  },
-  {
-    path: 'error',
-    element: <ErrorPage />,
   },
 ])
