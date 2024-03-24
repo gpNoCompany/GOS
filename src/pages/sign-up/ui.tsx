@@ -4,6 +4,7 @@ import { Input } from '../../shared/input'
 import { FormFields } from '../../shared/types/types'
 import { SocialsAccReg } from '../../widgets/socials-reg'
 import { onSubmit, schema } from './lib'
+import { Link } from 'react-router-dom'
 
 export const SignUpForm = () => {
   const {
@@ -38,9 +39,9 @@ export const SignUpForm = () => {
           {errors.password && (
             <div className="text-red">{errors.password.message}</div>
           )}
-          <a href="#" className="text-right text-light-gray">
+          <Link to="/reset-password" className="text-right text-light-gray">
             Forgot your password?
-          </a>
+          </Link>
           <button className="text-xs font-semibold text-black transition-all rounded-lg hover:opacity-80 bg-green h-11">
             Log in
           </button>

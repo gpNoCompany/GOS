@@ -39,7 +39,7 @@ export default {
         'dark': '#222222',
         'btn-border-black': '#343434',
         'input-border-gray': 'rgba(177, 150, 255, 0.5)',
-        'gray2': '#383838',
+        'input-hover': '#383838',
       },
       boxShadow: {
         main: '0px 7px 25px 0px rgba(0, 0, 0, 0.1)',
