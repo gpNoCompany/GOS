@@ -20,7 +20,7 @@ export const SignUpForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="w-80">
         <fieldset className="flex flex-col gap-5 mb-5 text-white">
           <legend className="mb-5 text-2xl font-black text-center">
-            Log in to [name]
+            Start for free
           </legend>
           <Input register={register} name="login" placeholder="Login" />
           {errors.login && (
